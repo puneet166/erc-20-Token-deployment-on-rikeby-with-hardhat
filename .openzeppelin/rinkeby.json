@@ -1,0 +1,148 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xEa4525c44287Ba44dE38e144DAE9e06E92E60314",
+    "txHash": "0xf1b6bdb51fc578e4766b210a34763ce18f17e1e0668ef744359fe425a2c26eb6"
+  },
+  "proxies": [
+    {
+      "address": "0x1C7A0Ef77814d9a02452285940b0B835f81df173",
+      "txHash": "0xd153612b989aa7f94c164599b76af457639107062748800df6f070b8171844c5",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "cfd6000202aa678120238b5c74ba7e3ce8130cb4b5d2443de9f1395b5804a6cb": {
+      "address": "0x08d0488F9bcD8941ea37694140C20876e14Dc548",
+      "txHash": "0x72e478ddb1d6c3660d6881de8e331224082133461a76b67e9f4607f9063d09f3",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:39"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:44"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:87"
+          },
+          {
+            "label": "admin",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address_payable",
+            "contract": "BuyNFT",
+            "src": "contracts\\buy.sol:30"
+          },
+          {
+            "label": "commision",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "BuyNFT",
+            "src": "contracts\\buy.sol:31"
+          },
+          {
+            "label": "signToken",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_mapping(t_address,t_array(t_struct(signverification)2228_storage)dyn_storage)",
+            "contract": "BuyNFT",
+            "src": "contracts\\buy.sol:46"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(signverification)2228_storage)dyn_storage": {
+            "label": "struct BuyNFT.signverification[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes_storage": {
+            "label": "bytes",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_array(t_struct(signverification)2228_storage)dyn_storage)": {
+            "label": "mapping(address => struct BuyNFT.signverification[])",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(signverification)2228_storage": {
+            "label": "struct BuyNFT.signverification",
+            "members": [
+              {
+                "label": "messageVerify",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "signatureVerify",
+                "type": "t_bytes_storage",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    }
+  }
+}
