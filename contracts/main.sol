@@ -14,7 +14,6 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol";
 
 
-
 // import "@openzeppelin/contracts/access/Ownable.sol";
 // import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 // import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -52,11 +51,11 @@ interface INFT {
 }
 
 contract NFT is OwnableUpgradeable, INFT,ERC721URIStorageUpgradeable {
-    address payable public _contractOwner;
-    mapping(uint256 => uint256) public price;
-    mapping(uint256 => bool) public listedMap;
-    mapping(uint256 => uint256) public royalty;
-    mapping(uint256 => address) public firstOwner;
+    address payable private _contractOwner;
+    mapping(uint256 => uint256) private price;
+    mapping(uint256 => bool) private listedMap;
+    mapping(uint256 => uint256) private royalty;
+    mapping(uint256 => address) private firstOwner;
 
     event Purchase(
         address indexed previousOwner,
@@ -112,10 +111,10 @@ contract NFT is OwnableUpgradeable, INFT,ERC721URIStorageUpgradeable {
         uint256 _price,
         uint256 royaltyInPercent
     ) public virtual override returns (uint256) {
-        require(
-            msg.sender == _contractOwner,
-            "it's not owner of this collection"
-        );
+        // require(
+        //     msg.sender == _contractOwner,
+        //     "it's not owner of this collection"
+        // );
         require(
             royaltyInPercent < 21,
             "royalty is to much high. Please select in between 1%-20%"

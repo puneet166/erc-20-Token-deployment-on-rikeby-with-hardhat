@@ -167,7 +167,7 @@ contract BuyNFT is OwnableUpgradeable {
     }
 
     function verifyString(string memory message, bytes memory _signature)
-        public
+        internal
         pure
         returns (address signer)
     {
@@ -242,7 +242,7 @@ contract BuyNFT is OwnableUpgradeable {
     }
 
     function splitSignature(bytes memory sig)
-        public
+        internal
         pure
         returns (
             bytes32 r,
